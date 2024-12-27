@@ -1,8 +1,9 @@
 @font-face {
-  font-family: 'SegoeUI';
-  src: url("./assets/segoeu.ttf")  format('truetype');
+  font-family: "SegoeUI";
+  src: url("./assets/segoeu.ttf") format("truetype");
 }
 
-*{
-    font-family: 'SegoeUI', sans-serif;
+* {
+  font-family: "SegoeUI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-size: 18px; */
 }

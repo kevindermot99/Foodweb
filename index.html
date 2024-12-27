@@ -7,15 +7,16 @@
     <script
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link rel="stylesheet" href="./index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body class="text-sm">
-    <!-- container -->
+    <!-- Navbar Container -->
     <div class="w-full h-fit group">
         <!-- upper -->
         <div class="w-full h-[59px] flex items-center justify-center border-b">
             <span
-                class="bg-[#ca4d772c] text-[#ca4d77] text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-[#ca4d77]">New</span>
+                class="bg-[#ca4d772c] text-[#ca4d77] text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-[#ca4d77] dark:text-white">New</span>
             <p class="text-sm font-[400] ">Update, 23 restaurants joined. visit</p>
             <span class="flex items-center justify-normal gap-2 text-sm text-[#ca4d77] ml-2 font-medium">
                 Check it out
@@ -27,30 +28,18 @@
             </span>
         </div>
         <!-- lower -->
-        <nav class="border-gray-200 bg-white hover:bg-[#ca4d77] transition-all duration-100 hover:text-white border-b h-[59px]">
+        <nav
+            class="border-gray-200 bg-white group-hover:bg-[#ca4d77] transition-all duration-100 group-hover:text-white border-b h-[59px] px-5">
             <div class="max-w-full flex flex-wrap items-center justify-between mx-auto px-4 h-full">
-                <div class="flex items-center">
+                <div class="flex items-center gap-2">
                     <a href="#" class="flex items-center space-x-3">
                         <span
                             class="self-center text-2xl font-bold whitespace-nowrap text-[#f0286a] group-hover:text-white">Miniweb</span>
                     </a>
-                    <div class="relative hidden md:flex items-center justify-start h-[35px] ml-[120px]">
-                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                            <svg class="w-4 h-4 text-gray-500 group-hover:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                            </svg>
-                            <span class="sr-only">Search icon</span>
-                        </div>
-                        <input type="text" id="search-navbar"
-                            class="block w-[230px] h-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-l-lg bg-gray-50 group-hover:bg-[#ca4d77] group-hover:border-white group-hover:text-white placeholder-gray-500 group-hover:placeholder-white outline-none focus:ring-0 focus:outline-none focus:shadow-none focus:border-gray-300 group-hover:focus:border-white"
-                            placeholder="Search...">
-
-                        <button type="button"
-                            class="text-white bg-[#ca4d77] group-hover:bg-white group-hover:text-[#ca4d77] font-medium rounded-r-lg text-sm min-w-[90px] h-full flex items-center justify-center me-2 focus:outline-none">
-                            Search
-                        </button>
+                    <div
+                        class="ml-[170px] w-fit text-xs font-medium px-3 py-0 bg-[#ca4d771b] group-hover:bg-[#ffffff3a] text-[#000] group-hover:text-white rounded-full flex items-center justify-start gap-0 ">
+                        You can search on a budget! explore
+                        <i class='bx bx-chevron-right text-lg p-0 m-0 pt-[1px]'></i>
                     </div>
                 </div>
 
@@ -80,16 +69,20 @@
                     <ul
                         class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-4 md:flex-row md:items-center md:mt-0 md:border-0">
                         <li>
-                            <a href="#"
-                                class="block py-2 px-3 rounded md:bg-transparent md:hover:text-blue-700">Home</a>
+                            <a href="#" class="block text-xl rounded md:bg-transparent">
+                                <i class='bx bx-search'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-3 rounded md:bg-transparent">Home</a>
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">About</a>
+                                class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent">About</a>
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">Services</a>
+                                class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent">Services</a>
                         </li>
                         <div class="w-[1px] h-[30px] bg-gray-200 group-hover:bg-white "></div>
                         <button type="button"
@@ -100,6 +93,142 @@
                 </div>
             </div>
         </nav>
+    </div>
+
+    <!-- Food Menu -->
+    <div class="w-full h-full max-h-[400px] flex items-start justify-center mt-10 px-10">
+        <!-- Food Types -->
+        <div class="w-full h-full flex items-start justify-start">
+            <div class="w-[300px] h-full flex flex-col gap-2 overflow-y-auto border-r mr-4 relative">
+                <div class="w-full h-fit pr-2 mb-2 bg-white sticky top-0 pb-1">
+                    <h1 class="font-bold mb-1">Restaurants</h1>
+                    <input type="text" id="search-navbar"
+                        class="block w-full h-[35px] p-1.5 ps-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 group-hover:bg-[#ca4d77] group-hover:border-white group-hover:text-white placeholder-gray-500 group-hover:placeholder-white outline-none focus:ring-0 focus:outline-none focus:shadow-none focus:border-gray-300 group-hover:focus:border-white"
+                        placeholder="Search...">
+
+                </div>
+                <h1>Chez Panisse</h1>
+                <h1>Le Bernardin</h1>
+                <h1>The French Laundry</h1>
+                <h1>Osteria Francescana</h1>
+                <h1>Noma</h1>
+                <h1>Eleven Madison Park</h1>
+                <h1>Per Se</h1>
+                <h1>Momofuku Ko</h1>
+                <h1>Attica</h1>
+                <h1>Blue Hill at Stone Barns</h1>
+                <h1>Daniel</h1>
+                <h1>Mirazur</h1>
+                <h1>Arpège</h1>
+                <h1>The Ledbury</h1>
+                <h1>Frasca Food and Wine</h1>
+                <h1>Le Cinq</h1>
+                <h1>El Celler de Can Roca</h1>
+                <h1>Azurmendi</h1>
+                <h1>Quintonil</h1>
+            </div>
+
+            <div class="h-full w-full overflow-y-auto">
+                <!-- Beef Section -->
+                <div class="sticky top-0 bg-white font-bold py-1 border-b">Beef</div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Beef Tenderloin" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Beef Tenderloin</p>
+                        <p class="text-sm text-gray-500">$25.99/kg</p>
+                    </div>
+                </div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Ribeye Steak" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Ribeye Steak</p>
+                        <p class="text-sm text-gray-500">$30.49/kg</p>
+                    </div>
+                </div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Ground Beef" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Ground Beef</p>
+                        <p class="text-sm text-gray-500">$12.99/kg</p>
+                    </div>
+                </div>
+
+                <!-- Chicken Section -->
+                <div class="sticky top-0 bg-white font-bold py-1 border-b">Chicken</div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Chicken Breast" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Chicken Breast</p>
+                        <p class="text-sm text-gray-500">$8.99/kg</p>
+                    </div>
+                </div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Chicken Thighs" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Chicken Thighs</p>
+                        <p class="text-sm text-gray-500">$7.49/kg</p>
+                    </div>
+                </div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Whole Chicken" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Whole Chicken</p>
+                        <p class="text-sm text-gray-500">$6.99/kg</p>
+                    </div>
+                </div>
+
+                <!-- Vegetables Section -->
+                <div class="sticky top-0 bg-white font-bold py-1 border-b">Vegetables</div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Carrots" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Carrots</p>
+                        <p class="text-sm text-gray-500">$2.49/kg</p>
+                    </div>
+                </div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Broccoli" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Broccoli</p>
+                        <p class="text-sm text-gray-500">$3.29/kg</p>
+                    </div>
+                </div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Spinach" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Spinach</p>
+                        <p class="text-sm text-gray-500">$1.99/bunch</p>
+                    </div>
+                </div>
+
+                <!-- Fruits Section -->
+                <div class="sticky top-0 bg-white font-bold py-1 border-b">Fruits</div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Bananas" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Bananas</p>
+                        <p class="text-sm text-gray-500">$1.49/kg</p>
+                    </div>
+                </div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Apples" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Apples</p>
+                        <p class="text-sm text-gray-500">$2.99/kg</p>
+                    </div>
+                </div>
+                <div class="flex items-center py-2">
+                    <img src="https://via.placeholder.com/40" alt="Oranges" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold">Oranges</p>
+                        <p class="text-sm text-gray-500">$2.79/kg</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Menu List -->
+        <div class="w-[500px] h-full overflow-y-auto p-4 bg-stone-200"></div>
     </div>
 </body>
 
